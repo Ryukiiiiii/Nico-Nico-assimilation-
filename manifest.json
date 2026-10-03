@@ -1,6 +1,6 @@
 {
   "name": "ニコニコ",
-  "short_name": "ニコニコ",
+  "short_name": "ニコニコ"
   "description": "ニコニコ風コスプレロールプレイページ",
   "start_url": "./",
   "scope": "./",
