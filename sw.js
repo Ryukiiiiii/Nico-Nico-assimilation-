@@ -1,4 +1,4 @@
-const CACHE = 'guruhachi-v1';
+const CACHE = 'ニコニコ-v1';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-192.svg', './icon-512.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
