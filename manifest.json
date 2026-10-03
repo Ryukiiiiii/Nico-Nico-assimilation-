@@ -1,6 +1,6 @@
 {
-  "name": "ニコニコ.グルハチ",
-  "short_name": "グルハチ",
+  "name": "ニコニコ",
+  "short_name": "ニコニコ",
   "description": "ニコニコ風コスプレロールプレイページ",
   "start_url": "./",
   "scope": "./",
