@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ニコニコ.グルハチ</title>
+<meta name="theme-color" content="#0878c9">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f3f3f3,#171717);--panel:light-dark(#fff,#242424);--text:light-dark(#222,#eee);--muted:light-dark(#777,#aaa);--blue:#0878c9;--line:light-dark(#d2d2d2,#444);--pink:#e74b78}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans JP",sans-serif;background:var(--bg);color:var(--text)}
+#app{min-height:100vh;background-color:var(--bg);width:100%;max-width:430px;min-width:320px;margin:0 auto;overflow-x:hidden}
+.secret{height:calc(100vw * 2.22115);min-height:calc(320px * 2.22115);padding:0 22px 70px;overflow:hidden;background:#000}.secret .terminal{max-width:360px;margin:0 auto;padding-top:5.5%}.secret h1{font-size:clamp(25px,7.8vw,34px);margin:5.5% 0 0}.secret .terminal>p:first-of-type{font-size:clamp(24px,7.7vw,32px);margin:0 0 5.5%}.secret .mode{height:18%;margin:0 0 5.5%;}.secret .mode .emoji{font-size:clamp(48px,15.8vw,66px)}.secret .mode .label{font-size:clamp(21px,6.7vw,28px)}
+.header{background:#fff;border-bottom:4px solid var(--blue);color:#222}.top{max-width:1100px;margin:auto;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:12px 18px}.logo{font-weight:900;font-size:25px;letter-spacing:-2px;color:#222}.logo span{color:#999;font-size:13px;letter-spacing:0;margin-left:5px}.search{display:flex;width:100%}.search input{flex:1;border:1px solid #bbb;padding:10px 12px;border-radius:4px 0 0 4px}.search button{width:52px;border:0;background:var(--blue);color:white;font-size:21px;border-radius:0 4px 4px 0;cursor:pointer}.nav{max-width:1100px;margin:auto;padding:9px 18px;font-size:13px;display:flex;gap:22px}.nav b{color:var(--blue)}
+main{max-width:430px;margin:14px auto;padding:0 12px}.notice{background:var(--panel);border:1px solid var(--line);padding:11px 12px;font-size:12px}.grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}.box{background:var(--panel);border:1px solid var(--line)}.title{padding:10px 12px;border-bottom:2px solid var(--blue);font-weight:700}.items{padding:11px;display:grid;gap:10px}.video{display:flex;gap:9px;border-bottom:1px solid var(--line);padding-bottom:10px}.thumb{width:100px;height:58px;flex:none;background:linear-gradient(135deg,#ddd,#aaa);display:grid;place-items:center;color:#666;font-weight:bold;font-size:12px}.video strong{font-size:13px}.video small{display:block;color:var(--muted);margin-top:4px;font-size:11px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.68);display:none;align-items:center;justify-content:center;padding:20px}.modal{width:min(430px,100%);background:#fff;color:#222;border-top:5px solid var(--blue);box-shadow:0 12px 40px #0008}.modal h2{font-size:18px;margin:0;padding:18px 20px 8px}.modal p{padding:0 20px;color:#555;font-size:14px}.modal input{margin:8px 20px;width:calc(100% - 40px);padding:12px;border:1px solid #aaa}.actions{display:flex;justify-content:flex-end;gap:8px;padding:12px 20px 20px}.actions button{padding:9px 16px;border:1px solid #aaa;background:#eee;cursor:pointer}.actions .go{background:var(--blue);color:#fff;border-color:var(--blue)}.error{color:#d22!important;min-height:18px}.secret{display:none;position:fixed;inset:0;min-height:100vh;width:100%;max-width:430px;min-width:320px;margin:0 auto;left:50%;transform:translateX(-50%);overflow:auto;background:#000;color:#fff;padding:58px 22px 70px;text-align:center;font-family:Arial,"Noto Sans JP",sans-serif;background-image:linear-gradient(145deg,transparent 0 57%,#a83d3d 57% 72%,transparent 72%) ,linear-gradient(35deg,transparent 0 28%,#a83d3d 28% 43%,transparent 43%);background-size:55% 30%,55% 30%;background-position:top left,top right;background-repeat:no-repeat}.secret:before,.secret:after{content:"";position:absolute;width:175%;height:82px;background:#a83d3d;z-index:0;pointer-events:none}.secret:before{top:auto;bottom:-4px;left:-43%;transform:rotate(35deg)}.secret:after{top:auto;bottom:-4px;right:-43%;transform:rotate(-35deg)}.secret .terminal{position:relative;z-index:1;max-width:360px;margin:0 auto;background:transparent;border:0;padding:0;box-shadow:none}.secret h1{color:#fff;font-size:34px;line-height:1.45;margin:45px 0 4px;font-weight:500}.secret .terminal>p:first-of-type{font-size:32px;line-height:1.35;margin:0 0 30px;font-weight:500}.secret .mode{height:152px;border:5px solid #a83d3d;background:#000;color:#fff;margin:0 0 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}.secret .mode:last-child{margin-bottom:0}.secret .mode .emoji{font-size:66px;line-height:1;margin-bottom:14px}.secret .mode .label{font-size:28px;font-weight:500}.secret .cursor{animation:blink 1s steps(2,start) infinite}@keyframes blink{50%{opacity:0}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.logo span{display:none}.nav{overflow:auto}.top{gap:8px}}
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="header"><div class="top"><div class="logo">ニコニコ動画 <span>prototype</span></div><div class="search"><input placeholder="キーワードを入力"><button id="searchBtn" aria-label="検索">⌕</button></div></div><nav class="nav"><b>ホーム</b><span>動画</span><span>ランキング</span><span>生放送</span><span>ゲーム</span><span>音楽</span></nav></header>
+  <main>
+    <div class="notice">ニコニコ動画へようこそ！　話題の動画をチェックしてみよう。</div>
+    <div class="grid"><section class="box"><div class="title">おすすめ動画</div><div class="items"><div class="video"><div class="thumb">VIDEO</div><div><strong>今日のおすすめ動画</strong><small>再生 12,304　コメント 842</small></div></div><div class="video"><div class="thumb">MUSIC</div><div><strong>話題の音楽ランキング</strong><small>再生 8,921　コメント 516</small></div></div><div class="video"><div class="thumb">LIVE</div><div><strong>いま話題の生放送</strong><small>視聴中 3,402</small></div></div></div></section><aside class="box"><div class="title">デイリーランキング</div><div class="items"><div>1　人気の動画</div><div>2　音楽PV</div><div>3　ゲーム実況</div><div>4　歌ってみた</div><div>5　踊ってみた</div></div></aside></div>
+  </main>
+</div>
+<div class="overlay" id="overlay"><div class="modal"><h2>パスワードを入力してください</h2><p>検索機能を利用するにはパスワードが必要です。</p><input id="pw" type="password" autocomplete="off" placeholder="パスワード"><p class="error" id="err"></p><div class="actions"><button id="cancel">キャンセル</button><button class="go" id="enter">入力</button></div></div></div>
+<div class="secret" id="secret"><div class="terminal"><h1>こんにちは! カッコイ!</h1><p>モードを選択して!</p><div class="mode" id="handMode"><div class="emoji">🖐️</div><div class="label">人の手!</div></div><div class="mode" id="gunMode"><div class="emoji">🔫</div><div class="label">銃口!</div></div></div></div>
+<script>
+const overlay=document.getElementById('overlay'),pw=document.getElementById('pw'),err=document.getElementById('err');
+if('serviceWorker' in navigator && location.protocol !== 'file:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+document.getElementById('searchBtn').onclick=()=>{overlay.style.display='flex';pw.value='';err.textContent='';setTimeout(()=>pw.focus(),50)};
+document.getElementById('cancel').onclick=()=>overlay.style.display='none';
+function check(){if(pw.value==='MikuTeto03090401'){overlay.style.display='none';document.getElementById('app').style.display='none';document.getElementById('secret').style.display='block'}else{err.textContent='パスワードが正しくありません。';pw.select()}}
+document.getElementById('enter').onclick=check;pw.addEventListener('keydown',e=>{if(e.key==='Enter')check()});
+function selectMode(){const notice=document.createElement('div');notice.textContent='選択されました!';notice.style.cssText='position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;font-size:32px;font-family:Arial,"Noto Sans JP",sans-serif';document.body.appendChild(notice);setTimeout(()=>{notice.remove();document.getElementById('secret').style.display='none';document.getElementById('app').style.display='block';window.scrollTo(0,0)},3000)}
+document.getElementById('handMode').onclick=selectMode;document.getElementById('gunMode').onclick=selectMode;
+</script>
+</body></html>
